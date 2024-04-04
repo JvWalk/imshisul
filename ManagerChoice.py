@@ -20,7 +20,7 @@ def Manegerchoice():
                 AddSub.time()
                 AddSub.room()
                 AddSub.add()
-                more = input('complete! for adding more subject, enter \'m\'\n')
+                more = input('Complete! For adding more subject, Enter \'m\'\n')
                 if more == 'm':
                     continue
                 else :

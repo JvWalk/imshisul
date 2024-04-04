@@ -1,22 +1,18 @@
 # import Manager
 # import Student 
 import numpy as np
-import Subject
-import managerCheck
-import add
+# import managerCheck
+import ManagerChoice
+import Manager
+import GwamokCaller
 
 
 UserList = {} # 이중 dictionary형태 UserList = { ID : { Type : PW } }
 
-
-def addClasses(ID) :
-    print("------수강신청-----")
-    return 0
-
-def managerCheck(CheckNum):
-    managerCheckNum = '1234'
-    if bool(CheckNum == managerCheckNum) : return CheckNum
-    else : return print("\nWrong Number.")
+# def managerCheck(CheckNum):
+#     managerCheckNum = '1234'
+#     if bool(CheckNum == managerCheckNum) : return CheckNum
+#     else : return print("\nWrong Number.")
 
 def getSubject():
     subjectFile = open("/Users/jwoo/Documents/Python/ImbededSystem/Practice1/basics.txt", 'r')
@@ -28,7 +24,6 @@ def getSubject():
     # for i in subjectList:
     #     subjectInfo = {'과목번호':subjectList[i][0], '과목명':subjectList[i][1], '전필여부':subjectList[i][2], '학점':subjectList[i][3],'수업시간':subjectList[i][4], '장소':subjectList[i][5] }
     # print(subjectInfo)
-getSubject()
 
 # def addSubject():
        
@@ -54,7 +49,7 @@ while(1):
                     case '1':
                         Type = "Manager"
                         CheckNum = input("Enter the Manager check number : ")
-                        if managerCheck(CheckNum) == CheckNum : pass # 맞으면 Manager로 설정
+                        if Manager.Check(CheckNum) == CheckNum : pass # 맞으면 Manager로 설정
                         else : continue     #틀리면 다시 반복문
                     case '2' :    # Student로 회원가입
                         Type = "Student"
@@ -102,26 +97,12 @@ while(1):
             getSubject()
 
             if UserList[ID][Password] == "Manager" :
+                managerOption = 0
                 while 1:
-                    print("\nChoose the Option.")
-                    print("1. Add subject")
-                    print("2. Delete subject")
-                    print("3. Modify subject")
-                    print("4. Exit")
-                    managerOption = input("Enter the number : ")
-                    # match managerOption :
-                    #     case '1':
-                            
-                    #     case '2':
-                    #     case '3':
-                    #     case '4':
-                    #     case _:
-                    #         print("\n3-This option is not available. Please enter the available number.")
-                    #         continue
-
+                    if ManagerChoice.Manegerchoice() == 4 : break
+                    else : continue  
             else : # UserList[ID][Password] == "Student" 
-                addClasses(ID)
-
+                GwamokCaller()
         case '3': #Exit
              exit()
         case _: #Wrong Choice
