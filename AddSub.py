@@ -43,7 +43,7 @@ def time():
         d2 = input("\nChoose the day of the second class.\n1. Mon    2. Tue    3. Wed    4. Thu    5. Fri\nEnter the number : ")
         t2 = input("\nChoose the time of the class.\n1. A | 9:00\n2. B | 10:00\n3. C | 11:00\n4. D | 12:00\n5. E | 13:00\n6. F | 14:00\nEnter the number : ")
         day2, time2 = tradeTime(d2, t2)
-        hour2 = input("\nChoose the hour class will take place.\n1. 1 hour : Theory class\n2. 4 hour : Experimental class\nEnter the number : ")
+        hour2 = input("\nChoose the hour class will take place.\n1. Teory class : 1 hour \n2. Experimental class : 4 hour \nEnter the number : ")
         Newsub.insert(4, day1+'#'+time1+hour1+'#'+day2+'#'+time2+hour2)
 
 def room():
