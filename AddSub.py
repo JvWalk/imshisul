@@ -63,16 +63,16 @@ def add():
 
 def tradeTime(day, time):
         match day:
-                case '1': day == 'Mon'
-                case '2': day == 'Tue'
-                case '3': day == 'Wed'
-                case '4': day == 'Thu'
-                case '5': day == 'Fri'
+                case '1': day = 'Mon'
+                case '2': day = 'Tue'
+                case '3': day = 'Wed'
+                case '4': day = 'Thu'
+                case '5': day = 'Fri'
         match time:
-                case '1': time == 'A'
-                case '2': time == 'B'
-                case '3': time == 'C'
-                case '4': time == 'D'
-                case '5': time == 'E'
-                case '6': time == 'F'
+                case '1': time = 'A'
+                case '2': time = 'B'
+                case '3': time = 'C'
+                case '4': time = 'D'
+                case '5': time = 'E'
+                case '6': time = 'F'
         return day, time
