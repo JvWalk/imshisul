@@ -6,7 +6,12 @@ print('type 1 to add class, type 2 to delete class, type 3 to see what class you
 	action = input('')
 	match action : 
 		case '1':
-			Addclass()
+			print('What class are you trying to add?')
+			print('(If you didn\'t scheduled 4 or more required class, we notice you that your call can be rejected)')
+			classnum = input('')
+			aa = Addclass(classnum)
+			if aa is 1 : 
+				break
 		case '2' :
 			DeleteClass()
 		case '3' :
