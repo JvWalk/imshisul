@@ -5,6 +5,7 @@ import numpy as np
 import ManagerChoice
 import Manager
 import GwamokCaller
+import GwamokShower
 
 
 UserList = {} # 이중 dictionary형태 UserList = { ID : { Type : PW } }
@@ -15,7 +16,7 @@ UserList = {} # 이중 dictionary형태 UserList = { ID : { Type : PW } }
 #     else : return print("\nWrong Number.")
 
 def getSubject():
-    subjectFile = open("/Users/jwoo/Documents/Python/ImbededSystem/Practice1/basics.txt", 'r')
+    subjectFile = open("basics.txt", 'r')
     subject = subjectFile.readlines()
     subjectList = [x.split() for x in subject]
     subjectInfo = {}
@@ -94,7 +95,8 @@ while(1):
             else : pass
 
             print("Login success.\n")
-            getSubject()
+            GwamokShower()
+        
 
             if UserList[ID][Password] == "Manager" :
                 managerOption = 0
