@@ -8,4 +8,3 @@ def all(Gwamok):
             f.write('\t') 
         f.write('\n')
     f.close()
-

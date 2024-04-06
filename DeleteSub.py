@@ -13,8 +13,7 @@ def ask():
 	gumsek = GwamokCaller.gwamok[:,:1]
 	if keyword in gumsek :
 		loca = np.where(gumsek == keyword)
-		locainint=int(loca[0])
-		print(locainint)
+		locainint=int(loca[0][0])
 		print('\nfound',keyword,'!')
 		print( 'is', GwamokCaller.gwamok[locainint,:],'the right class?\n')
 		isitright=input('type y for\'yes\'\n')

@@ -1,0 +1,3 @@
+100	LogicCircuit	Required	3	Wed#B1#Fri#B1	Woncheon#535	
+101	CapstoneDesign1	Required	2	Fri#F4	Woncheon#538	
+102	DataStructure	Required	3	Mon#C1#Thu#C1	Woncheon#340	

@@ -2,6 +2,7 @@ import numpy as np
 import AddSub
 import DeleteSub
 import ModSub
+import GwamokShower
 
 def Manegerchoice():
     print("\nChoose the Option.")
@@ -13,6 +14,8 @@ def Manegerchoice():
     match managerOption :
         case '1':
             while (1) :
+                GwamokShower.popup.update_idletasks()
+                GwamokShower.popup.update()
                 AddSub.classno()
                 AddSub.name()
                 AddSub.pilsu()
@@ -39,5 +42,12 @@ def Manegerchoice():
             exit()
         case _:
             print("\nThis option is not available. Please enter the available number.")
+##GwamokShower.showing()
+##thread1 = threading.Thread(GwamokShower.popup.mainloop())
+##thread1.daemon = True
+##thread1.start()
 
 Manegerchoice()
+
+
+

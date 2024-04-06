@@ -43,21 +43,22 @@ def time():
         t2 = input("\nChoose the time of the class.\n1. A | 9:00\n2. B | 10:00\n3. C | 11:00\n4. D | 12:00\n5. E | 13:00\n6. F | 14:00\nEnter the number : ")
         day2, time2 = tradeTime(d2, t2)
         hour2 = input("\nChoose the hour class will take place.\n1. Theory class : 1 hour \n2. Experimental class : 4 hour \nEnter the number : ")
-        Newsub.insert(4, day1+'#'+time1+hour1+'#'+day2+'#'+time2+hour2)
+        Newsub.insert(4, day1+'#'+time1+hour1+'#'+day2+'#'+time2+hour2) #join 함수 활용
 
 def room():
         gwan = input("Enter hall : ")
         roomnum = input("Enter room number : ")
 		#if 시간과 강의실 중복검사
-        Newsub.insert(5, gwan+'#'+roomnum)
+        Newsub.insert(5, gwan+'#'+roomnum) #join 함수 활용
         
 def add():
         f = open("basics.txt",'a')
-        f.write('\n')
         for i in range(6) :
-                idk = Newsub[i]
-                f.write(idk)
+                adding = Newsub[i]
+                f.write(adding)
                 f.write('\t')
+
+        f.write('\n')
         f.close()
 
 def tradeTime(day, time):

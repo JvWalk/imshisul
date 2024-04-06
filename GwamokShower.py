@@ -1,12 +1,11 @@
 import tkinter as tk
-##from tkinter.tix import *
 import GwamokCaller
+
 
 popup=tk.Tk()
 popup.title("YUN DAE HEE")
 popup.geometry("900x1000+100+1")
-popup.resizable(False, False)
-
+popup.resizable(False, False)    
 
 label = tk.Label(popup, height=1)
 show = tk.Label(text="class number", width=20, height=2)
@@ -25,5 +24,5 @@ for i in range(GwamokCaller.gwamok.shape[0]):
     for j in range(GwamokCaller.gwamok.shape[1]):
         show  = tk.Label(text=GwamokCaller.gwamok[i][j], width=20, height=2)
         show.grid(row=i+1, column=j)
-    
-popup.mainloop()
+        
+
